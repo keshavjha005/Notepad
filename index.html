@@ -1,0 +1,85 @@
+
+<!-- Abhinav 
+
+    ================
+        NOTEPAD
+    ================
+    
+    (Make Earth Green 🍀)
+    ... 
+    ...
+    
+    THANK YOU for Visiting
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="header">
+        <input type="text" id="title" placeholder="Title" value="" onkeyup="passVal()">
+    </header>
+
+    <!-- Main Container -->
+    <div id="notecontainer">
+
+        <button id="newNote" class="btn" onclick="newNote()">
+            <abbr title="New Note" style="border: none; text-decoration: none;"><img src="new.jpeg" alt="new copy" height="30px" width="30px" style="position: relative; top: 4px;"></abbr>
+            </button>
+
+        <button id="previous" class="btn" onclick="change('prev')">
+            <abbr title="previous" style="border: none; text-decoration: none;"><img src="back.png" alt="previous" height="30px" width="30px" style="position: relative; top: 5px;"></abbr>
+            </button>
+            
+        <button id="next" class="btn" onclick="change('next')">
+            <abbr title="Next" style="border: none; text-decoration: none;"><img src="next.png" alt="next" height="30px" width="30px" style="position: relative; top: 4px;"></abbr>
+        </button>
+
+        
+
+        <button id="clear" class="btn" onclick="cleanPaper()">
+            <abbr title="Clear" style="border: none; text-decoration: none;"><img src="reset.png" alt="clear" height="30px" width="30px" style="position: relative; top: 4px;"></abbr>
+
+        </button>
+
+        
+
+        <br>
+
+        <div id="changeColor">
+            <label for="color" id="pageC">Page:</label>
+                <input type="color" class="colorBoxDesign" name="pageColor" id="pageColor" value="#e2e2e2" onchange="pageChange()">
+  
+            <label for="color" id="ruleC">Rule:</label>
+                <input type="color" class="colorBoxDesign" name="ruleColor" id="ruleColor" value="#000000" onchange="ruleChange()">
+           
+            <label for="color" id="textC">Text:</label>
+                <input type="color" class="colorBoxDesign" name="textColor" id="textColor" value="#000000" onchange="textChange()">
+        </div>
+   
+
+        <div id="paper" >
+                <div id="notes" onkeyup="passVal()" contenteditable="true"  style="min-height: 306.563px;" spellcheck="true"></div>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
